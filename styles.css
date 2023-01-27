@@ -1,0 +1,166 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+header {
+    background-color: rgb(53, 53, 53);
+    padding: 10px 50px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.header-link {
+    color: rgba(255, 255, 255, 0.61);
+    font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-link:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    min-width: 500px;
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+.todo-logo {
+    font-size: 30px;
+    align-self: flex-start;
+    margin: 15px 0;
+}
+
+
+
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 30px;
+}
+
+#input_text {
+    width: 70%;
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 5px;
+}
+
+#input_add {
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.753);
+    cursor: pointer;
+}
+
+#input_add:hover {
+    color: rgb(114, 114, 114);
+}
+
+
+#list_tasks {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.list_item {
+    animation: fade-in 0.7s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+    gap: 7px;
+}
+
+.finished p {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.473);
+}
+
+
+.newBut {
+    border: none;
+    background: none;
+    color: rgba(0, 0, 0, 0.63);
+    cursor: pointer;
+}
+
+.newBut:hover {
+    transition: 0.3s;
+    font-size: 27px;
+    color: brown;
+}
+
+.stat-wrapper {
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    background-color: white;
+    right: 30px;
+    top: 70px;
+    width: 250px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
+    justify-content: space-between;
+    animation: fade-in 0.7s ease-in-out;
+    box-shadow: 0px 4px 10px 0px #2c2c2c29;
+}
+
+.ul-stat {
+    margin: 20px 0;
+    list-style-type: none;
+    line-height: 40px;
+}
+
+#aside_close_but {
+    position: absolute;
+    align-self: flex-end;
+    padding: 0 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#aside_close_but:hover {
+    color: brown;
+    transition: 0.3s;
+    font-size: 30px;
+}
