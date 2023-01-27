@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDoList</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+</head>
+
+<body>
+    <header>
+        <a class="header-link">ToDo List</a>
+        <a class="header-link" id="aside_open_but">Statistics</a>
+    </header>
+    <main>
+        <p class="todo-logo">ToDo List</p>
+        <form id="form">
+            <input type="text" value="" placeholder="New Task" id="input_text">
+            <input type="button" value="library_add" id="input_add" class="material-symbols-outlined">
+        </form>
+        <ul id="list_tasks">
+        </ul>
+    </main>
+
+    <div class="stat-wrapper">
+        <input type="button" value="close" id="aside_close_but" class="material-symbols-outlined">
+        <p>Статистика</p>
+        <ul class="ul-stat">
+            <li id="out_finished">Кол-во завершенных задач - </li>
+            <li id="out_unfinished">Кол-во незавершенных задач - </li>
+        </ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
